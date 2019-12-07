@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <br>
+    <br>
+    <h2 class=" text-center text-capitalize" style="font-family: monospace, monospace">marriage details</h2>
+    <div class="container text-capitalize">
+        <ul class="list-group">
+             {% if form.remark %}
+            <li class="list-group-item">s/no: {{ form.no }}</li>
+            <li class="list-group-item">name of groom: {{ form.name_of_groom}}</li>
+            <li class="list-group-item">name of bride: {{ form.name_of_bride}}</li>
+            <li class="list-group-item">groom's Town: {{ form.groom_Town }}</li>
+            <li class="list-group-item">bride's Town: {{ form.bride_Town }}</li>
+            <li class="list-group-item">groom's parent: {{ form.groom_parent}}</li>
+            <li class="list-group-item">bride's parent: {{ form.bride_parent}}</li>
+            <li class="list-group-item">assisting priest:<b class="text-uppercase"> {{ form.assisting_priest }}</b></li>
+            <li class="list-group-item"> groom's witnesses: {{ form.groom_witnesses }}</li>
+            <li class="list-group-item">bride's witnesses: {{ form.bride_witnesses }}</li>
+            <li class="list-group-item">date of marriage: {{ form.date_of_marriage }}</li>
+            <li class="list-group-item">Remarks: {{ form.remark}}</li>
+            {% else %}
+            <li class="list-group-item">s/no: {{ form.no }}</li>
+            <li class="list-group-item">name of groom: {{ form.name_of_groom}}</li>
+            <li class="list-group-item">name of bride: {{ form.name_of_bride}}</li>
+            <li class="list-group-item">groom's Town: {{ form.groom_Town }}</li>
+            <li class="list-group-item">bride's Town: {{ form.bride_Town }}</li>
+            <li class="list-group-item">groom's parent: {{ form.groom_parent}}</li>
+            <li class="list-group-item">bride's parent: {{ form.bride_parent}}</li>
+            <li class="list-group-item">assisting priest:<b class="text-uppercase"> {{ form.assisting_priest }}</b></li>
+            <li class="list-group-item"> groom's witnesses: {{ form.groom_witnesses }}</li>
+            <li class="list-group-item">bride's witnesses: {{ form.bride_witnesses }}</li>
+            <li class="list-group-item">date of marriage: {{ form.date_of_marriage }}</li>
+            {% endif %}
+        </ul>
+    </div>
+
+{% endblock %}
+<br>

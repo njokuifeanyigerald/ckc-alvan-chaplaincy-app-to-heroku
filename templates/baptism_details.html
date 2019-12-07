@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <br>
+    <br>
+    <h2 class="text-center text-capitalize"  style="font-family: monospace, monospace">baptism details </h2>
+    <hr>
+    <div class="container">
+         <ul class="list-group">
+             <li class="list-group-item">name: {{form.name}}</li>
+             <li class="list-group-item">date of baptism: {{form.date_of_baptism}}</li>
+             <li class="list-group-item">place of baptism: {{form.place_of_baptism}}</li>
+             <li class="list-group-item">baptismal name: {{form.baptismal_name}}</li>
+             <li class="list-group-item">other names: {{form.other_names}}</li>
+             <li class="list-group-item">surname: {{form.surname}}</li>
+             <li class="list-group-item">date 0f birth: {{form.date_of_birth}}</li>
+             <li class="list-group-item">place of birth: {{form.place_of_birth}}</li>
+             <li class="list-group-item">hometown: {{form.hometown}}</li>
+             <li class="list-group-item">name of parents: {{form.name_of_parents}}</li>
+             <li class="list-group-item">solenm or private: {{form.solenm_or_private}}</li>
+             <li class="list-group-item">name of God parent: {{form.name_of_God_parents}}</li>
+             <li class="list-group-item">name of minister: {{form.name_of_minister}}</li>
+        </ul>
+    </div>
+
+
+{% endblock %}
+<br>

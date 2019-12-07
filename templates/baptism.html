@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="container">
+        <h2 class=" text-center text-capitalize">baptism records</h2>
+        <hr class="my-4">
+        <div class="form-inline d-block">
+            <form  method="get" action="/baptism_search">
+                <div>
+                    <input name="q"  class="form-control" type="text" placeholder="name/baptismal name" >
+                    <input type="submit" value="search" class="form-control btn btn-outline-success">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="container">
+            <ul>
+            {% for info in form %}
+                <li><a href="{{ info.get_baptism_url }}">{{info.name}}</a> {{ info.date_of_baptism }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+<br>

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <br>
+    <br>
+    <hr class="my-4">
+    <h2 class="display-4 text-center text-capitalize">Daily readings</h2>
+     <hr class="my-4">
+    <ul class="list-group">
+    {% for info in form %}
+        <li class="list-group-item text-capitalize"><a href="{{ info.get_readings_url }}">readings for: {{ info.date }}</a> title: {{ info.title }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+<br>

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="container">
+        <h2 class="text-center text-capitalize">marriage search</h2>
+        <hr class="my-4">
+        <div class="form-inline d-block">
+            <form  method="get" action="/marriage_search">
+                <div>
+                    <input name="q"  class="form-control" type="text" placeholder="groom's/bride's name" >
+                    <input type="submit" value="search" class="form-control btn btn-outline-warning">
+                </div>
+            </form>
+        </div>
+        <hr class="my-4">
+
+         <ul>
+         {% if object_list %}
+        {% for info in object_list %}
+            <li class="text-capitalize"><a href="{{ info.get_marriage_url }}">{{ info.date_of_marriage }}: {{ info.name_of_groom}} & {{ info.name_of_bride}} </a> </li>
+        {% endfor %}
+         {% else %}
+         <p class="text-center text-capitalize">record doesn't exist</p>
+         {% endif %}
+        </ul>
+    </div>
+
+
+{% endblock %}
+<br>
