@@ -1,1 +1,1 @@
-web: gunicorn ckc.wsgi
+web: gunicorn di.wsgi
